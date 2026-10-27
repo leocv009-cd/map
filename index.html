@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Luxora</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <style>html,body,#map{height:100%;margin:0}</style>
 </head>
 <body>
-
-  <h1>Luxora</h1>
-  <p>Welcome to our official page.</p>
-
+<div id="map"></div>
+<script>
+const map = L.map("map").setView([20.672, -103.417], 17);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19}).addTo(map);
+</script>
 </body>
 </html>
